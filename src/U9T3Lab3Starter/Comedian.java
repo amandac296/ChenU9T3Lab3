@@ -53,11 +53,9 @@ public class Comedian extends Performer {
 
     @Override
     public void perform() {
-        int j = 1;
+        super.perform();
         for(int i = 0; i < jokes.size(); i++){
-            System.out.println("Performing for an audience! Performance #" + j);
             System.out.println(jokes.get(i));
-            j++;
         }
     }
 
@@ -84,7 +82,7 @@ public class Comedian extends Performer {
     //    the method should do the standard rehearsal,
     //    followed by perform if performAfter is true.
     public void rehearse(boolean performAfter) {
-        System.out.println("Rehearsing for the big show!");
+        rehearse();
         if(performAfter){
             perform();
         }
